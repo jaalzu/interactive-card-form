@@ -1,0 +1,225 @@
+:root {
+    --gradient-active-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --error-red: hsl(0, 100%, 66%);
+    
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+  
+    --font-size-body: 18px;
+    --font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    background-color: var(--white);
+}
+
+input{
+    border-image: var(--gradient-active-border);
+}
+input.error{
+    border-color: var(--error-red);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+    width: 100%;
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card .card__show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin-top: 2rem;
+}
+
+.card .card__show .card__front{
+    transform: translateX(-20px);
+}
+.card .card__show .card__front img{
+    position: relative;
+    width: 350px;
+    height: 200px;
+    transform: translateY(-85px);
+}
+
+.card .card__front .card__number{
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+.card .card__front .card__name{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 1.5px;
+    font-size: .8rem;
+}
+
+.card .card__front .card__expiry{
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    color: var(--white);
+    letter-spacing: 1.5px;
+    font-size: .8rem;
+}
+
+.card .card__front .card__logo img{
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    z-index: 2;
+    bottom: 70%;
+    left: 8%;
+}
+
+
+
+.card .card__show .card__back img{
+    position: relative;
+    height: 200px;
+    display: flex;
+    transform: translateX(40px);
+    width: 350px;
+}
+.card .card__show .card__back .card__security {
+    position: absolute;
+    top: 15.7%;
+    color: var(--white);
+    right: 13%;
+    font-size: .9rem;
+}
+
+
+/* form */
+
+.card__form form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 30px;
+    margin-bottom: 4rem;
+}
+
+.card__form form .form__input{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+.card__form form .form__input input{
+    border: 1px solid var(--light-grayish-violet);
+    padding: .8rem 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+.card__form form .form__input input::placeholder{
+    color: var(--dark-grayish-violet);
+    font-weight: 300;
+    opacity: .5;
+    letter-spacing: 1.1px;
+    font-family: var(--font-family);
+}
+
+.card__form form .form__input label{
+    font-size: .8rem;
+    letter-spacing: 1.2px;
+    margin-bottom: .5rem;
+    color: var(--very-dark-violet);
+}
+
+
+
+.card__form form .form__input .card__error{
+    color: var(--error-red);
+    font-size: .8rem;
+    margin-left: .2rem;
+    margin-top: .3rem;
+    display: none;
+}
+
+
+
+.small__inputs {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+  }
+.small__inputs label{
+    display: flex;
+}
+  
+  
+  .exp__date input {
+    width:90px;
+    text-align: center;
+  }
+  
+  
+  #cvc-card {
+    width: 195px; 
+    display: flex;
+  }
+  
+   
+ .form__button{
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    padding: .9rem;
+    font-family: var(--font-family);
+    display: block;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.card__check{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 8rem;
+    padding-inline: 30px;
+    display: none;
+}
+
+.card__check img{
+    margin-bottom: 2.5rem;
+}
+
+.card__check h2{
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+}
+
+.card__check p{
+    margin-bottom: 3rem;
+    color: var(--dark-grayish-violet);
+}
+

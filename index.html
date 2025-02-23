@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="card">
+    <div class="card__show">
+     
+<div class="card__back">
+    <img src="/images/bg-card-back.png" alt="">  
+    <p class="card__security" id="card-security-show">
+      000
+  </p>
+</div>      
+<div class="card__front">
+  <div class="card__logo">
+    <img src="/images/card-logo.svg" alt="">
+  </div>
+  <img src="/images/bg-card-front.png" alt="">
+  <p class="card__number" id="card-number-show">
+    0000 0000 0000 0000
+   </p>
+   <p class="card__name" id="card-name-show">
+     Jane Appleseed
+   </p>
+   <p class="card__expiry" id="card-expiry-date">
+     00/00
+  </p>
+ </div> 
+    </div>
+
+
+<div class="card__form">
+<form action="" id="form">
+  <div class="form__input">
+    <label for="name" id="name" required>CARDHOLDER NAME</label>
+    <input type="text" for="name" id="card-name" placeholder="e.g. Jane Appleseed">
+    <span class="card__error" id="card-error">only letters!</span>
+  </div>
+  <div class="form__input">
+    <label for="number" id="number">CARD NUMBER</label>
+  <input type="number" form="number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+    <span class="card__error">Must be 16 numbers long</span>
+  </div>
+  <div class="form__input">
+    <div class="small__inputs">
+      <div class="exp__date">
+        <label for="date">EXP.DATE(MM/YY)</label>
+        <input type="text" for="month" placeholder="MM" id="month-card" maxlength="2" required>
+        <input type="text" for="year" placeholder="YY" id="year-card" maxlength="2" required>
+        <span class="card__error">can't be blank</span>
+
+      </div>
+      <div class="cvc__container">
+        <label for="cvc">CVC</label>
+        <input type="number" for="cvc" id="cvc-card" placeholder="e.g. 123">
+        <span class="card__error">can't be blank!</span>
+      </div>
+      </div>
+  </div>
+  <button class="form__button" id="form-button">Confirm</button>
+</form>
+</div>
+</section>
+
+
+ <section class="card__check" id="card-check">
+    <img src="/images/icon-complete.svg" alt="">
+    <h2>
+  Thank you!
+    </h2>
+    <p>
+      We've added your card details
+    </p>
+    <button class="form__button">
+      Continue
+    </button>
+</section> 
+
+<script src="script.js"></script>
+</body>
+</html>
