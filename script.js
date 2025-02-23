@@ -24,11 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         monthCardInput.value = monthCardInput.value.replace(/\D/g, "").slice(0, 2);
         let value = monthCardInput.value;
 
-        // Permitir solo valores entre 1 y 12
         if (value < 1 || value > 12) {
             monthCardInput.setCustomValidity("Please enter a value between 1 and 12");
         } else {
-            monthCardInput.setCustomValidity(""); // Resetea el mensaje de error
+            monthCardInput.setCustomValidity(""); 
         }
         updateExpiryDate();
     });
@@ -39,8 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function updateExpiryDate() {
-        const month = monthCardInput.value.padStart(2, "0"); // Asegurar formato MM
-        const year = yearCardInput.value.padStart(2, "0"); // Asegurar formato YY
+        const month = monthCardInput.value.padStart(2, "0"); 
+        const year = yearCardInput.value.padStart(2, "0"); 
         cardDateShow.textContent = `${month}/${year}`;
     }
 
@@ -50,17 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cardNumberInput.addEventListener("input", function (e) {
-        let value = e.target.value.replace(/\D/g, ""); // Eliminar todos los caracteres no numéricos
-        let formattedValue = formatCardNumber(value); // Formatear el número de la tarjeta
+        let value = e.target.value.replace(/\D/g, ""); 
+        let formattedValue = formatCardNumber(value); 
         e.target.value = formattedValue;
         cardNumberShow.textContent = formattedValue || "0000 0000 0000 0000";
     });
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevenir el envío del formulario para validar manualmente
+        event.preventDefault(); 
 
         const nameValue = nameInput.value.trim();
-        const cardNumberValue = cardNumberInput.value.replace(/\s/g, ""); // Eliminar espacios para validación
+        const cardNumberValue = cardNumberInput.value.replace(/\s/g, "");
         const monthValue = monthCardInput.value.trim();
         const yearValue = yearCardInput.value.trim();
         const cvcValue = cardCVC.value.trim();
